@@ -130,6 +130,8 @@
     src: "{{ __nexus_download__.destination }}"
     dest: "{{ nexus_installation_dir }}"
     creates: "{{ nexus_installation_dir }}/nexus-{{ nexus_version }}"
+    name: "{{ nexus_os_user }}"
+    group: "{{ nexus_os_group }}"
     copy: false
     mode: "0755"
   notify:
