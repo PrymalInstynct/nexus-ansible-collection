@@ -42,7 +42,7 @@
   ansible.builtin.wait_for:
     path: "{{ nexus_data_dir }}/log/nexus.log"
     search_regex: Started Sonatype Nexus .*
-    timeout: 1800
+    timeout: 300
   listen: wait-for-nexus
 
 - name: Wait for Nexus port to be available
